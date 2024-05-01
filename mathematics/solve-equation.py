@@ -33,6 +33,7 @@ def infix_to_postfix(equation):
 
 def evaluate_postfix(equation): 
   stack = []
+  equation = equation.replace(' ','') #to handle spaces in postfix notation input
   tokens = list(equation)
   for token in tokens:
     if token in ['+','-','*','/','^']:
