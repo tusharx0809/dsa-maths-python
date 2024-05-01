@@ -1,4 +1,4 @@
-"""Solving an equation following the rules of BODMAS using stack and postfix notations"""
+"""Solving an equation following the rules of BODMAS using stack and postfix notations. Below code converts an infix notation to postfix and solve it"""
 
 def infix_to_postfix(equation):
   operators = ['+','-','*','/','(',')','^']
