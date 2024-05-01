@@ -47,6 +47,17 @@ class Linked_list:
             temp2 = temp2.next
         new_node.next = temp2.next
         temp2.next = new_node
+    def delete_node_from_position(self, position):
+        if position == 1:
+            self.head = self.head.next
+            return
+        
+        temp = self.head
+        prev = None
+        for _ in range(position - 1):
+            prev = temp
+            temp = temp.next
+        prev.next = temp.next
 
     def display_list(self):
         list_elements = []
@@ -64,4 +75,8 @@ list1.insert_at_head(1)
 list1.display_list()
 list1.insert_at_position(55,2)
 #at second position, 55 will be inserted and list will look like 1 -> 55 -> 2 -> 3 -> NULL
+list1.display_list()
+#below function will delte the 3rd node which is
+list1.delete_node_from_position(3)
+#now the list is 1 -> 55 -> 3 -> NULL
 list1.display_list()
