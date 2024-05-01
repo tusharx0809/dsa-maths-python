@@ -31,8 +31,31 @@ def infix_to_postfix(equation):
     postfix_notation += stack.pop()
   return postfix_notation
 
-#def evaluate_postfix(equation): 
+def evaluate_postfix(equation): 
+  stack = []
+  tokens = list(equation)
+  for token in tokens:
+    if token in ['+','-','*','/','^']:
+      num_first = stack.pop()
+      num_second = stack.pop()
+      if token == '+':
+        stack.append(int(num_second) + int(num_first))
+      elif token == '-':
+        stack.append(int(num_second) - int(num_first))
+      elif token == '*':
+        stack.append(int(num_second) * int(num_first))
+      elif token == '/':
+        stack.append(int(num_second) / int(num_first))
+      else:
+        stack.append(int(num_second) ** int(num_first))
+    else:
+      stack.append(token)
+  return stack[0]
 
-print(infix_to_postfix('((A+B)*(C-D)/E)^F'))
+postfix = infix_to_postfix('(3+4)*(5-2)/7^2')
+print(postfix)
+print("Solution below:")
+
+print(evaluate_postfix(postfix))
 
 
