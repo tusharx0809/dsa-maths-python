@@ -76,7 +76,11 @@ list1.display_list()
 list1.insert_at_position(55,2)
 #at second position, 55 will be inserted and list will look like 1 -> 55 -> 2 -> 3 -> NULL
 list1.display_list()
-#below function will delte the 3rd node which is
+#this will insert 66 in linked list at 2nd position from end
+list1.insert_from_end(66,2)
+#this will display the list as 1 -> 55 -> 2 -> 66 -> 3 -> NULL
+list1.display_list()
+#below function will delte the 3rd node which is 2
 list1.delete_node_from_position(3)
-#now the list is 1 -> 55 -> 3 -> NULL
+#now the list is 1 -> 55 -> 66 -> 3 -> NULL
 list1.display_list()
