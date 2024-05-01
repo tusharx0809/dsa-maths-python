@@ -20,4 +20,5 @@ def binary_search(nums, target):
             right -= 1
     return "Target not found!"
 nums = [4, 6, 9, 13, 87, 102, 203, 405]
-print(binary_search(nums, 103))
+print(binary_search(nums, 103))#This will print target not found as 103 is not in nums
+print(binary_search(nums, 87))#This will print 4, which is index location of target 87
