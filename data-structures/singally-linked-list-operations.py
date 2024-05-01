@@ -5,7 +5,7 @@ class Node:
     def __init__(self, data = None):
         self.data = data
         self.next = None
-#defint the linked and its functions
+#define the linked and its functions
 class Linked_list: 
     def __init__(self):
         self.head = None #initialize the head pointer
