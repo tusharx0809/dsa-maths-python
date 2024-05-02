@@ -24,7 +24,7 @@ def infix_to_postfix(equation):
                     postfix_notation += stack.pop() + ' '
                 stack.pop()
             else:
-                while stack and stack[-1] != '(' and priority[char] <= priority.get(stack[-1], 0):
+                while stack and stack[-1] != '(' and priority[char] <= priority[stack[-1]]:
                     postfix_notation += stack.pop() + ' '
                 stack.append(char)
     
