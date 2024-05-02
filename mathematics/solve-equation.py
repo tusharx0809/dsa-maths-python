@@ -40,15 +40,15 @@ def evaluate_postfix(equation):
       num_first = stack.pop()
       num_second = stack.pop()
       if token == '+':
-        stack.append(int(num_second) + int(num_first))
+        stack.append(float(num_second) + float(num_first))
       elif token == '-':
-        stack.append(int(num_second) - int(num_first))
+        stack.append(float(num_second) - float(num_first))
       elif token == '*':
-        stack.append(int(num_second) * int(num_first))
+        stack.append(float(num_second) * float(num_first))
       elif token == '/':
-        stack.append(int(num_second) / int(num_first))
+        stack.append(float(num_second) / float(num_first))
       else:
-        stack.append(int(num_second) ** int(num_first))
+        stack.append(float(num_second) ** float(num_first))
     else:
       stack.append(token)
   return stack[0]
