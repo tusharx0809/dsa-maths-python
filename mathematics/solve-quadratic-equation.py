@@ -1,6 +1,6 @@
 """Below program is used to calculate the roots of quadratic equation without using RegEx"""
 
-#Quadratic equation can be represented in the form of ax**2+b*x+_c = 0 where
+#Quadratic equation can be represented in the form of ax**2+b*x+_c = 0 
 #Formula to find the roots of a quadratic equation (-b +- ((math.sqrt(pow(b,2)-4*a*c))))  / (2 * a)
 #equation used 
 import math
