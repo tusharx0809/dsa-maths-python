@@ -25,6 +25,15 @@ class TreeNode:
         helper(root)
         return final
     
+    def postorder_traversal(self, root):
+        final = []
+        def helper(node):
+            if node is not None:
+              helper(node.left)
+              helper(node.right)
+              final.append(node.val)
+        helper(root)
+        return final
 
 #     1
 #    / \
@@ -40,4 +49,5 @@ root.left.right = TreeNode(5)
 root.right.right = TreeNode(6)
 
 print("Inorder: ",root.inorder_traversal(root))
-print("Preorder: ", root.preorder_traversal(root))
+print("Preorder: ",root.preorder_traversal(root))
+print("Postorder: ",root.postorder_traversal(root))
