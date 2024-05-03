@@ -15,12 +15,22 @@ class TreeNode:
         helper(root)
         return final
     
+    def preorder_traversal(self, root):
+        final = []
+        def helper(node):
+            if node is not None:
+              final.append(node.val)
+              helper(node.left)
+              helper(node.right)
+        helper(root)
+        return final
+    
 
-#    1
-#   / \
-#  2   3
-# / \   \
-#4   5   6  
+#     1
+#    / \
+#   2   3
+#  / \   \
+# 4   5   6  
 
 root = TreeNode(1)
 root.left = TreeNode(2)
@@ -29,4 +39,5 @@ root.left.left = TreeNode(4)
 root.left.right = TreeNode(5)
 root.right.right = TreeNode(6)
 
-print(root.inorder_traversal(root))
+print("Inorder: ",root.inorder_traversal(root))
+print("Preorder: ", root.preorder_traversal(root))
