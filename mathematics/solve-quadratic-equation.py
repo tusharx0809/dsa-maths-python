@@ -32,8 +32,12 @@ def solve_quadratic(equation):
     b = int(b) if len(b) > 0 else 1
     c = int(c) if len(c) > 0 else 1
 
-    first_root = (-b + ((math.sqrt(pow(b,2)-4*a*c))))  / (2 * a)
-    second_root = (-b - ((math.sqrt(pow(b,2)-4*a*c)))) / (2 * a)
-    return first_root, second_root
+    if pow(b,2)-4*a*c < 0:
+        return "No real roots exists for equation!"
+    else:
+        first_root = (-b + ((math.sqrt(pow(b,2)-4*a*c))))  / (2 * a)
+        second_root = (-b - ((math.sqrt(pow(b,2)-4*a*c)))) / (2 * a)
+        return first_root, second_root
 
 print(solve_quadratic('2x^2-14x+24')) # will print two roots of equation as (4.0, 3.0)
+print(solve_quadratic('x^2-2x+2'))# this will print No real roots exists for this equation!
