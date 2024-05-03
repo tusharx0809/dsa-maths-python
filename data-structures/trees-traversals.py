@@ -48,6 +48,6 @@ root.left.left = TreeNode(4)
 root.left.right = TreeNode(5)
 root.right.right = TreeNode(6)
 
-print("Inorder: ",root.inorder_traversal(root))
+print("Inorder: ",root.inorder_traversal(root))  
 print("Preorder: ",root.preorder_traversal(root))
 print("Postorder: ",root.postorder_traversal(root))
