@@ -4,7 +4,7 @@ Working Alogorithm:
 nums = [5,4,3,2,1]
 final = []
 Add the min and max from nums to final araay so arr becomes [1,5]
-Remove min and max from nums which is 1 and 5
+Remove min and max from nums which is 1 and 5 so that nums = [4,3,2]
 After removing, find the middle index by using mid = len(final) // 2 and add the min and max at position mid and mid + 1
 Repeat this until nums is empty
 final array will be the sorted array
