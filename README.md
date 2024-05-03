@@ -1,1 +1,1 @@
-# This repository will be containing bascis of Mathematics, Data strcutures and algorithms and some problem solving
+# This repository will be containing basics of Mathematics, Data strcutures and algorithms and some problem solving
