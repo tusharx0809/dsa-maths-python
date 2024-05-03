@@ -10,7 +10,7 @@ Repeat this until nums is empty
 final array will be the sorted array
 
 """
-def unique_sort(nums):
+def unique_sort_ascending(nums):
   final = []
   while len(nums) != 0:
       if len(nums) == 1:
@@ -27,6 +27,6 @@ def unique_sort(nums):
           final.insert(mid+1,max(nums))
         nums.remove(min(nums))
         nums.remove(max(nums))
-  return final  
+  return final 
 nums = [100,98,12,45,67,43]
-print(unique_sort(nums))
+print("Ascending:",unique_sort_ascending(nums))
