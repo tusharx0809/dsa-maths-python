@@ -19,12 +19,12 @@ def unique_sort(nums):
         nums.remove(nums[0])
       else:
         if len(final) == 0:
-          final.append(min(nums)) # change this to final.append(max(nums)) to sort it descending order
-          final.append(max(nums)) # change this to final.append(min(nums)) to sort it descending order
+          final.append(min(nums)) # change this to final.append(max(nums)) to sort in descending order
+          final.append(max(nums)) # change this to final.append(min(nums)) to sort in descending order
         else:
           mid = len(final) // 2
-          final.insert(mid,min(nums)) # change this to final.insert(mid,max(nums)) tp
-          final.insert(mid+1,max(nums)) # change this to final.insert(mid+1,min(nums)) to sort it descending order
+          final.insert(mid,min(nums)) # change this to final.insert(mid,max(nums)) to sort in descending order
+          final.insert(mid+1,max(nums)) # change this to final.insert(mid+1,min(nums)) to sort in descending order
         nums.remove(min(nums))
         nums.remove(max(nums))
   return final 
