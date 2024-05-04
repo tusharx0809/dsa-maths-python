@@ -62,3 +62,14 @@ def is_armstrong(num):
 
 print(is_armstrong(153)) # True
 print(is_armstrong(123)) # False
+
+
+#check if a number is power of 2
+def is_power_of_two(num):
+    if num <= 0:
+        return False
+    log_n = math.log2(num)
+    return log_n.is_integer()
+
+print(is_power_of_two(16)) # True
+print(is_power_of_two(20))
