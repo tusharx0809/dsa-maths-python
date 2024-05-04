@@ -1,4 +1,4 @@
-"""Below is the program for Merge-sort - A very efficient sorting algorithms"""
+"""Below is the program for Merge-sort - A very efficient sorting algorithm"""
 
 def merge_sort(nums):
     if len(nums) <= 1:
