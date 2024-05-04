@@ -68,8 +68,8 @@ print(is_armstrong(123)) # False
 def is_power_of_two(num):
     if num <= 0:
         return False
-    log_n = math.log2(num)
+    log_n = math.log2(num) # Find the log base 2 of num and check if it is integer
     return log_n.is_integer()
 
 print(is_power_of_two(16)) # True
-print(is_power_of_two(20))
+print(is_power_of_two(20)) # False
