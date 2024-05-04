@@ -1,3 +1,4 @@
+import math
 # Sum of digits of a given number
 def sum_of_digits(num):
     if num < 10 and num > -10:
@@ -45,3 +46,19 @@ def missing_number(nums):
     return int((n*(n+1))/2) - sum(nums) #Find the sum of numbers from 0 to n and subtract the sum of nums to get the missing number
 nums = [0,1,2,3,4,5,6,8]
 print("The missing number is:", missing_number(nums)) # The missing number is: 7
+
+#Check if the number is an armstrong number
+#An armstromg number is a number whose sum of cubes of its digits is equal to the number itself
+#Example 153, 1^3 + 5^3 + 3^3 = 153. So 153 is an armstromng number
+
+def is_armstrong(num):
+    n = num #to store the value of num
+    sum_of_cubes = 0
+    while num != 0:
+        dig = num % 10
+        sum_of_cubes += dig**3
+        num = num // 10
+    return sum_of_cubes == n
+
+print(is_armstrong(153)) # True
+print(is_armstrong(123)) # False
