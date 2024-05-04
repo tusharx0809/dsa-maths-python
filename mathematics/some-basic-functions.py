@@ -31,4 +31,11 @@ def reverse(num):
 
 num3 = 123
 print("The reverse of", num3, "is:", reverse(num3)) # The reverse of 123 is: 321
+
+# Finding the reverse of number using python inbuilt functionality
+def reverse_number(num):
+    return int(str(num)[::-1])
+
+num4 = 654
+print("The reverse of", num4, "is:", reverse_number(num4))
     
